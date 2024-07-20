@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>Navigation Bar</title>
+    </head>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #cover{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(40, 40, 40, 0.7);
+            display: grid;
+            grid-template-rows: 0.5fr 5fr 0.5fr;
+        }
+       nav,footer{
+        background-color: #000000;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+       }
+       #form{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+       }
+       .inputitem{
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+       }
+       main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       button.inputitem{
+        border-radius: 10px;
+        color: #000000;
+        font-weight: bold;
+        font-size: 14px;
+       }
+       .inputparent > label{
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 14px;
+       } 
+       #bmi,#result{
+        width: 80%;
+        text-align: center;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 14px;
+       }
+       
+       
+    </style>
+    <body>
+    <div id="cover">
+        <nav>
+            <h1>Secure your Health by knowing your BMI</h1>
+
+        </nav>
+        <main>
+        <form id="form">
+            <div class="inputparent">
+            <label>Enter your height here:</label>
+            <input class="inputitem" id="height"  type="number" step="0.01" />
+        </div>
+        <div class="inputparent">
+            <label>Enter your weight here:</label>
+            <input class="inputitem" id="weight" type="number"  />
+        </div>
+            <span id="bmi" class="inputitem"></span>
+            <span id="result" class="inputitem"></span>
+            <button class="inputitem" onclick='calculatebmi(event)'>Submit</button>
+        </form>
+        </main>
+        <footer>
+            <h1>HTML CLASS</h1>
+        </footer>
+    </div>
+<script>
+    function calculatebmi(event){
+        event.preventDefault()
+        var height =document.getElementById('height').value;
+        var weight =document.getElementById('weight').value;
+        var bmi = weight/(height^2);
+        var result;
+        if(bmi < 18.5){
+            result="You are Underweight";
+            document.getElementById('result').style.color='#ff0000';
+            document.getElementById('bmi').style.color='#ff0000';
+            
+
+        }
+        else if(bmi>=18.5 && bmi<=24.9){
+            result="You Weigth is Normal";
+            document.getElementById('result').style.color='#00ff00';
+            document.getElementById('bmi').style.color='#00ff00';
+
+        }
+        else if(bmi>=25 && bmi<=29.9){
+            document.getElementById('result').style.color='#ff0000';
+            document.getElementById('bmi').style.color='#ff0000';
+            result="You are Overweight";
+
+            
+
+        }
+        else{
+            result="You are Obese";
+            document.getElementById('bmi').style.color='#ff0000';
+            document.getElementById('result').style.color='#ff0000';
+
+
+        }
+        document.getElementById('bmi').innerHTML="BMI:" + " " + bmi;
+        document.getElementById('result').innerHTML=result;
+        
+    }
+   
+   
+</script>
+    </body>
+</html>

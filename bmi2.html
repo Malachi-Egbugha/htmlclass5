@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>BMI</title>
+   <style>
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+     #grid_container{
+        display: grid;
+        grid-template-rows: 0.5fr 5fr 0.5fr;
+        width: 100%;
+        height: 100vh;
+
+    }
+    footer, nav{
+        background-color: #000000;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        color: #ffffff;
+        align-items: center;
+        background-color: rgba(40, 40, 40, 0.7);
+    }
+    .inputitem, button{
+        padding: 10px;
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+    .inputitem{
+        color: #000000;
+    }
+    button{
+        border-radius: 10px;
+        width: 60%;
+        color: #000000;
+        margin: auto;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    
+    
+
+   </style>
+   </head>
+    <body>
+        <div id="grid_container">
+            <nav>
+<h1>Secure your Health by knowing your BMI</h1>
+            </nav>
+            <main>
+                <form>
+                  
+                        <label>Enter your height here:</label>
+                        <input id="height" class="inputitem" type="number" step="0.01" />
+
+                
+                        <label>Enter your Weight here:</label>
+                        <input id="weight" class="inputitem" type="number" step="0.01" />
+
+                   
+                    <button id="submit">Submit</button>
+                </form>
+<span id="bmival"></span>
+<span id="bmivalresult"></span>
+            </main>
+            <footer>
+                <h1>HTML CLASS</h1>
+
+            </footer>
+
+        </div>
+<script type="module" src="bm2.js">
+
+</script>
+    </body>
+</html>

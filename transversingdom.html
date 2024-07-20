@@ -1,0 +1,45 @@
+<html>
+    <head>
+<title>Tranvesing the DOM</title>
+<style>
+    #change{
+        font-size: 30px;
+        font-weight: 500;
+        color: blue;
+    }
+    .imagepix{
+        width: 200px;
+        height: 100px;
+        content: url(./pictures//background.jpg)
+    }
+</style>
+    </head>
+  
+    <body>
+        <div>
+            <img id="imagepix" />
+            <ul id="list-item">
+                <li id="firstitem">First</li>
+                <li>Second</li>
+                <li  id="third">Third</li>
+                <li id="fourth">Fourth</li>
+            </ul>
+        </div>
+        <div><p>Thank you</p></div>
+<script>
+    var list=document.querySelector("#list-item");
+    var allchild =list.children;
+    for(var i=0; i < allchild.length; i++){
+        //console.log(allchild[i])
+    }
+    var testprevious= document.getElementById("firstitem");
+    testprevious.style.fontSize="100px";
+    testprevious.style.color="#00ff00";
+    testprevious.style.fontWeight=600;
+    var third= document.getElementById("third");
+    third.setAttribute("id","change");
+    var imgnode = document.getElementById("imagepix");
+    imgnode.setAttribute("class","imagepix");    
+</script>
+    </body>
+</html>

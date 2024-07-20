@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Navigation Bar</title>
+    </head>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: crimson;
+            padding: 10px;
+        }
+        ul{
+            list-style-type: none;
+            
+        }
+        li{
+            display: inline;
+            
+        }
+        a{
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            color: #ffffff;
+            margin-right: 5px;
+        }
+        header{
+            width: 100%;
+            height: 450px;
+            background-image: url(./images/background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0px;
+
+        }
+        #innerheader{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 450px;
+            background-color: rgba(0, 0, 0, 0.5);
+            
+        }
+        h1{
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+    <body>
+        <nav>
+            <div class="logo">
+                <h1>HTML LOGO</h1>
+
+            </div>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+
+            </div>
+        </nav>
+        <header>
+            <div id="innerheader">
+                <h1>WELCOME TO NIIT</h1>
+
+            </div>
+
+        </header>
+        <main>
+            <input id="height" type="number" />
+            <input id="weight" type="number" />
+            <span id="bmi"></span>
+            <button onclick='calculatebmi()'>Click me</button>
+        </main>
+<script>
+    function calculatebmi(){
+        var height =document.getElementById('height').value;
+        var weight =document.getElementById('weight').value;
+        var bmi = weight/(height^2);
+        document.getElementById('bmi').innerHTML=bmi;
+        
+    }
+    /*
+    var firstnum=1;
+    let secondnum=3;
+  
+    const result = firstnum + secondnum;
+    console.log(result);
+    window.alert(result);
+    var  z = {malachi:[[10,11, 12],[1,2,3]], john:[[1,2],[3,4]]};
+    var y= z.malachi[0][6] ;
+    */
+   
+</script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Navigation Menu</title>
+    <style>
+        .menu{
+            position: absolute;
+            right: 20px;
+            padding: 20px;
+            background-color: red;
+            cursor: pointer;
+        }
+        .bar{
+            width: 30px;
+            height: 3px;
+            background-color: blue;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+        .menu.open .bar-1{
+            transform: rotate(40deg);
+
+        }
+        .menu.open .bar-2{
+            opacity: 0;
+
+        }
+        .menu.open .bar-3{
+            transform: rotate(-40deg);
+            margin-top: -12px;
+
+        }
+        nav{
+            height: 0;
+            overflow: hidden;
+            transition: height 0.4s;
+        }
+        nav.navbar{
+            height: 100px;
+        }
+    </style>
+    </head>
+    <body>
+        
+            <div class="menu open">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+            </div>
+
+            <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </nav>
+        <script>
+const menu=document.querySelector('.menu');
+const nav=document.querySelector('nav');
+
+menu.addEventListener('click', ()=>{
+    menu.classList.toggle('open');
+    nav.classList.toggle('navbar');
+})
+
+        </script>
+    </body>
+</html>

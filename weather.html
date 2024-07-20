@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="weather.css"/>
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="enter city name" spellcheck="false"/>
+            <button ><img src="images/pictures/search.png"/></button>
+        </div>
+        <div class="weather">
+            <img src="images/pictures/rain.jpg" class="weather-icon"/>
+            <h1 class="temp">22c</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/pictures/humidity.png"/>
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/pictures/wind.png"/>
+                    <div>
+                        <p class="wind">15 km/hr</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        async function test(){
+        const consume = new Promise("http://api.weatherapi.com/v1/current.json?key=45d223aaa3ea44a085903644243005&q=Lagos&aqi=no");
+        var data = await consume.json();
+        }
+        test();
+    </script>
+</body>
+</html>

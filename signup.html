@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>
+            Signup
+        </title>
+        <style>
+            body{
+                margin: 0px;
+                padding: 0px;
+            }
+            #parent_container{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.5fr 0.8fr 10fr 0.5fr;
+                height: 100vh;
+
+            }
+            header{
+                height: 40px;
+                background-color: black;
+
+            }
+            nav{
+                background-color: white;
+            }
+            main{
+                background-color: grey;
+            }
+            footer{
+                background-color: black;
+            }
+            #form{
+                display: flex;
+                flex-direction: column;
+
+            }
+            input{
+                margin-bottom: 10px;
+                padding: 10px;
+                width: 300px;
+            }
+            button{
+                border-radius: 10px;
+                background-color: black;
+                color: white;
+            }
+            label{
+                color: white;
+            }
+            #test{
+                display: flex;
+                
+                justify-content: center;
+    
+                align-items: center;
+                height: 100%;
+                
+            }
+            label{
+                font-weight: bold;
+                font-size: 14px;
+            }
+           
+        
+        </style>
+    </head>
+    <body>
+        <div id="parent_container">
+            <header>
+
+            </header>
+            <nav>
+<h1>Please fill the signup form</h1>
+            </nav>
+            <main>
+           <div id="test">  
+                              <form id="form">
+                        <label>First Name:</label>
+                        <input type="text" />
+                        <label>Last Name</label>
+                        <input type="text"/>
+                        <label>Email:</label>
+                        <input type="email"/>
+                        <label>Address:</label>
+                        <textarea></textarea>
+                        <label>Password:</label>
+                        <input type="password"/>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+            
+
+            </main>
+            <footer>
+
+            </footer>
+
+       
+        
+            
+    </div>
+    </body>
+</html>

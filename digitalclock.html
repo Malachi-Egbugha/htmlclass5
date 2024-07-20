@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=@, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="digitalclock.css"/>
+</head>
+<body>
+    <div id="theme">
+    <div id="container">
+       
+        <div id="digitalclock">
+            00:00:00
+        </div>
+    </div>
+    </div>
+    <script>
+        function timer(){
+        var hours =new Date().getHours().toString().padEnd(2,0);
+        var minutes=new Date().getMinutes().toString().padEnd(2,0);
+        var seconds =new Date().getSeconds().toString().padEnd(2, 0);
+        var currenttime =  hours + ":" + minutes + ":" + seconds ;
+        var timerdiv = document.getElementById("digitalclock");
+        timerdiv.innerHTML=currenttime;
+        }
+        setInterval(timer, 1000);
+    </script>
+</body>
+</html>

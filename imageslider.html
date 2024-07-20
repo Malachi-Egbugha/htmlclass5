@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<div>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.imgcontainer{
+    width: 80%;
+    height: 500px;
+}
+#imagepix{
+    width: 100%;
+    height: 100%;
+}
+    </style>
+</head>
+<body>
+    <div class="imgcontainer">
+        <img id="imagepix"  />
+        
+
+    </div>
+    <script>
+        var imagesarr =["/images/pictures/humidity.png", "/images/pictures/background.jpg","/images/pictures/rain.jpg"];
+        var startingindex=0;
+        var imagedom = document.querySelector("#imagepix");
+        console.log(imagedom);
+        setInterval(callbackfunc, 3000);
+        function callbackfunc(){
+            startingindex++
+            if(startingindex >= imagesarr.length){
+                startingindex=0
+            }
+    
+            imagedom.setAttribute("src", imagesarr[startingindex]);
+           
+            
+            
+
+        }
+    </script>
+</body>
+</html>
