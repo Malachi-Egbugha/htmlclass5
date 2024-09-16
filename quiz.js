@@ -1,6 +1,6 @@
 import questions  from "./questionbank.js";
 import { reset } from "./quizservices.js";
-var endtime = new Date(new Date().getTime() + 5000);
+var endtime = new Date(new Date().getTime() + 22000);
 var endtimehour=endtime.getHours().toString();
 var endtimeminutes=endtime.getMinutes().toString();
 var endtimeseconds=endtime.getSeconds().toString();
